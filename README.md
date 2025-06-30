@@ -56,7 +56,10 @@ Generating War File using STS/Eclipse:
          2. Under web, select WAR file.
          
          3. Enter the destination path and click on the finish button. Your war is ready.
-		 
+![Screenshot_3](https://github.com/user-attachments/assets/039efe60-22df-4ace-b8af-4eff0b817839)
+![Screenshot_2](https://github.com/user-attachments/assets/e162795c-feec-4883-9719-9429c9fca5d8)
+
+   
 		 
 Generating War File using Maven:
 -----------------------------------
