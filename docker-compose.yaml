@@ -10,15 +10,14 @@ services:
       MYSQL_DATABASE: dd
       MYSQL_USER: acp4pogynvaeidfj
       MYSQL_PASSWORD: jc31d2qyy7h9jv5jn1u9uosjksxzaizw
-      MYSQL_TCP_PORT: 8514
+      MYSQL_TCP_PORT: 3306
     volumes:
       - mysql-data:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
     ports:
-      - "8514:8514"
+      - "3306:3306"
     networks:
       app-network:
-        ipv4_address: 192.168.2.175
   tomcat:
     build:
       context: .
@@ -32,13 +31,9 @@ services:
       - ./WebContent/Config.properties:/usr/local/tomcat/webapps/ROOT/Config.properties
     networks:
       app-network:
-        ipv4_address: 192.168.2.174
 
 volumes:
   mysql-data:
 
 networks:
   app-network:
-    ipam:
-      config:
-        - subnet: 192.168.2.0/24
